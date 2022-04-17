@@ -1,0 +1,32 @@
+{
+  "name": "algorritmo",
+  "version": "1.0.0",
+  "description": "A bot to play songs on Discord",
+  "main": "index.js",
+  "author": "Felipe Marques",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js",
+    "lint": "eslint \"{client,commands,libs,test}/**/*.js\" --fix"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^0.6.0",
+    "@discordjs/opus": "^0.6.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "discord-api-types": "^0.23.1",
+    "discord-player": "^5.1.0",
+    "discord-ytdl-core": "^5.0.4",
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0",
+    "ffmpeg": "^0.0.4",
+    "fluent-ffmpeg": "^2.1.2",
+    "ytdl-core": "^4.10.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.4.0"
+  }
+}
