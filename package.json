@@ -20,7 +20,7 @@
     "dotenv": "^10.0.0",
     "ffmpeg": "^0.0.4",
     "fluent-ffmpeg": "^2.1.2",
-    "ytdl-core": "^4.10.1"
+    "ytdl-core": "^4.11.2"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
