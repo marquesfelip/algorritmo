@@ -27,12 +27,20 @@ const player = new Player(client, {
 })
 
 player.on('error', (queue, error) => {
-    console.log(`[${queue.guild.name}] [error] Erro: ${error.message}`)
+    console.error(
+        `[${queue.guild.name}] \n ${Date().toLocaleString()} \n [error] Erro: ${
+            error.message
+        }`
+    )
 })
 
 player.on('connectionError', (queue, error) => {
-    console.log(
-        `[${queue.guild.name}] [connectionError] Erro: ${error.message}`
+    console.error(
+        `[${
+            queue.guild.name
+        }] \n ${Date().toLocaleString()} \n [connectionError] Erro: ${
+            error.message
+        }`
     )
 })
 
