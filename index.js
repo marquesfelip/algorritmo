@@ -19,14 +19,21 @@ for (const file of commandFiles) {
 
 console.log(client.commands)
 
-const player = new Player(client)
+const player = new Player(client, {
+    ytdlOptions: {
+        filter: 'audioonly',
+        quality: 'highestaudio',
+    },
+})
 
 player.on('error', (queue, error) => {
-    console.log(`[${queue.guild.name}] Erro vindo da conexão: ${error.message}`)
+    console.log(`[${queue.guild.name}] [error] Erro: ${error.message}`)
 })
 
 player.on('connectionError', (queue, error) => {
-    console.log(`[${queue.guild.name}] Erro vindo da conexão: ${error.message}`)
+    console.log(
+        `[${queue.guild.name}] [connectionError] Erro: ${error.message}`
+    )
 })
 
 player.on('trackStart', (queue, track) => {

@@ -8,6 +8,7 @@ module.exports = class extends Client {
                 Intents.FLAGS.GUILD_MESSAGES,
                 Intents.FLAGS.GUILDS,
             ],
+            restRequestTimeout: 60000,
         })
 
         this.commands = new Collection()
