@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon index.js",
-    "lint": "eslint \"{client,commands,libs,test}/**/*.js\" --fix"
+    "lint": "eslint \"{/,client,commands,libs,test}/**/*.js\" --fix"
   },
   "dependencies": {
     "@discordjs/builders": "^0.6.0",
