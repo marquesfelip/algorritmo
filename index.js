@@ -28,9 +28,9 @@ const player = new Player(client, {
 
 player.on('error', (queue, error) => {
     console.error(
-        `[${queue.guild.name}] \n ${Date().toLocaleString()} \n [error] Erro: ${
-            error.message
-        }`
+        `[${
+            queue.guild.name
+        }] \n ${Date().toLocaleString()} \n [error] Erro: ${error}`
     )
 })
 
