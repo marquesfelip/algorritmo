@@ -70,7 +70,9 @@ player.on('queueEnd', (queue) => {
     queue.metadata.send('✅ | Fim da fila!')
 })
 
-client.once('ready', async () => console.log('Preparado!'))
+client.once('ready', async () =>
+    console.log('Preparado!' + Date().toLocaleString())
+)
 
 client.once('reconnecting', async () => console.log('Reconectando!'))
 
