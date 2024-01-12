@@ -28,9 +28,9 @@ const player = new Player(client, {
 
 player.on('error', (queue, error) => {
     console.error(
-        `[${queue.guild.name}] \n ${Date().toLocaleString()} \n [error] Erro: ${
-            error.message
-        }`
+        `[${
+            queue.guild.name
+        }] \n ${Date().toLocaleString()} \n [error] Erro: ${error}`
     )
 })
 
@@ -70,7 +70,9 @@ player.on('queueEnd', (queue) => {
     queue.metadata.send('✅ | Fim da fila!')
 })
 
-client.once('ready', async () => console.log('Preparado!'))
+client.once('ready', async () =>
+    console.log('Preparado!' + Date().toLocaleString())
+)
 
 client.once('reconnecting', async () => console.log('Reconectando!'))
 
